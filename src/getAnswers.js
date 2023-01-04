@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-let employees = {};
+employees = [];
 
 const questions = [
   {
@@ -21,6 +21,30 @@ const questions = [
     message: "Enter employee's position:",
   },
   {
+    type: 'input',
+    name: 'roleSpecific',
+    message: "Enter manager's office number:",
+    when(answers) {
+      return answers.role === 'Manager'
+    }    
+  },  
+  {
+    type: 'input',
+    name: 'roleSpecific',
+    message: "Enter engineer's GitHub username:",
+    when(answers) {
+      return answers.role === 'Engineer'
+    }    
+  },  
+  {
+    type: 'input',
+    name: 'roleSpecific',
+    message: "Enter intern's university:",
+    when(answers) {
+      return answers.role === 'Intern'
+    }    
+  },  
+  {
     type: "confirm",
     name: "addEmployee",
     message: "Would you like to add another employee?",
@@ -29,12 +53,12 @@ const questions = [
 
 const getAnswers = function () {
   return inquirer.prompt(questions).then((answers) => {
-    if (answers.addEmployee) {
-      employees += answers;
+    if (answers.addEmployee) {      
+      employees.push(answers);
       return getAnswers();
     } else {
-      employees += answers;
-      return employees;
+      employees.push(answers);
+      return (employees);
     }
   });
 }

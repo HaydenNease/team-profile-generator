@@ -6,5 +6,6 @@ const fs = require('fs');
 
 getAnswers()
   .then(employees => {
-    return console.log(employees);
+    
+    }
   })
