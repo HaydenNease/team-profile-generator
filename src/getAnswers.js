@@ -53,10 +53,11 @@ const questions = [
 
 const getAnswers = function () {
   return inquirer.prompt(questions).then((answers) => {
-    if (answers.addEmployee) {      
+    if (answers.addEmployee) {        
       employees.push(answers);
       return getAnswers();
     } else {
+
       employees.push(answers);
       return (employees);
     }
