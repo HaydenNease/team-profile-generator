@@ -9,6 +9,7 @@ const generateHTML = require('./src/generateHTML.js');
 
 getAnswers()
   .then(employees => {
+    console.log(employees);
     return generateTeamCards(employees);
   })
   .then(teamCards => {

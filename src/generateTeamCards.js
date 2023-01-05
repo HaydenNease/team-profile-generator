@@ -1,6 +1,6 @@
-const teamCards = []
+teamCards = []
 
-function generateTeamCards (employees) {
+const generateTeamCards = function (employees) {
     for (let i = 0; i < employees.length; i++) {
         if (employees[i].role === 'Manager') {
             teamCards.push(`<article>
@@ -37,10 +37,7 @@ function generateTeamCards (employees) {
         `)
         }
     };
-} 
-generateTeamCards()
-  .then(teamCards => {
-    return teamCards
-});
+    return teamCards;
+}
 
-module.exports = generateTeamCards
+module.exports = generateTeamCards;
