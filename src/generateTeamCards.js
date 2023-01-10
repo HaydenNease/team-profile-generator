@@ -2,6 +2,7 @@ teamCards = []
 
 const generateTeamCards = function (employees) {
     for (let i = 0; i < employees.length; i++) {
+        console.log(employees[i]);
         if (employees[i].role === 'Manager') {
             teamCards.push(`<article>
                 <h2>Manager</h2>
