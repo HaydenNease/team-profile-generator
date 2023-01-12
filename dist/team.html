@@ -1,12 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY TEAM</title>
-</head>
-<body>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Our Team</title>
+            <!-- Minified version -->
+            <style>
+                 @import "https://cdn.simplecss.org/simple.min.css";
 
-</body>
+                main {
+                     display: grid;
+                 grid-column: 1/-1;
+                justify-items: center;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1rem;
+                max-width: 1140px;
+                margin: auto;
+                }
+
+                 @media screen and (max-width: 1140px) {
+                    main {
+                    grid-template-columns: 1fr 1fr;
+                    }
+                }
+                @media screen and (max-width: 720px) {
+                    main {
+                    grid-template-columns: 1fr;
+                     }
+                }
+            </style>
+    </head>
+    <body>
+        <header>
+            <h1>Our Team</h1>
+        </header>
+         <main>
+            
+
+                <article>
+                    <h2>asd</h2>
+                    <ul>
+                        <li>Role: Manager</li>
+                        <li>ID: 1</li>
+                        <li>Email: asd</li>
+                        <li>Office Number: asd</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h2>asd</h2>
+                    <ul>
+                        <li>Role: Engineer</li>
+                        <li>ID: 2</li>
+                        <li>Email: asd</li>
+                        <li>GitHub: <a href="https://github.com/asd/">asd</a></li>
+                    </ul>
+                </article>
+        
+        </main>
+        <footer>
+            &copy; 2022-2023
+        </footer>
+    </body>
 </html>
