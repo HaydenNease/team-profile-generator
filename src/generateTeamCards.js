@@ -2,7 +2,6 @@ teamCards = []
 
 const generateTeamCards = function (employees) {
     employees.map(employee => {
-        console.log(employee);
         if (employee.getRole() === 'Manager') {
             teamCards.push(`\n
                 <article>
@@ -10,7 +9,7 @@ const generateTeamCards = function (employees) {
                     <ul>
                         <li>Role: ${employee.getRole()}</li>
                         <li>ID: ${employee.id}</li>
-                        <li>Email: ${employee.email}</li>
+                        <li>Email: ${employee.getEmail()}</li>
                         <li>Office Number: ${employee.office}</li>
                     </ul>
                 </article>`)
@@ -21,8 +20,8 @@ const generateTeamCards = function (employees) {
                     <ul>
                         <li>Role: ${employee.getRole()}</li>
                         <li>ID: ${employee.id}</li>
-                        <li>Email: ${employee.email}</li>
-                        <li>GitHub: <a href="${employee.getGitHub()}">${employee.gitHub}</a></li>
+                        <li>Email: ${employee.getEmail()}</li>
+                        <li>GitHub: <a href="${employee.getGitHub()}" target="blank">${employee.gitHub}</a></li>
                     </ul>
                 </article>
         `)
@@ -33,7 +32,7 @@ const generateTeamCards = function (employees) {
                     <ul>
                         <li>Name: ${employee.getRole()}</li>
                         <li>ID: ${employee.id}</li>
-                        <li>Email: ${employee.email}</li>
+                        <li>Email: ${employee.getEmail()}</li>
                         <li>School: ${employee.getSchool()}</li>
                     </ul>
                 </article>`
